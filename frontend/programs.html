@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Programs | Kyungdong University (KDU Global)</title>
+    <meta name="description" content="Explore KDU Global programs with search and filters for international students." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/variables.css?v=20260508" />
+    <link rel="stylesheet" href="assets/css/utilities.css?v=20260508" />
+    <link rel="stylesheet" href="assets/css/animations.css?v=20260508" />
+    <link rel="stylesheet" href="assets/css/style.css?v=20260509" />
+    <link rel="stylesheet" href="assets/css/responsive.css?v=20260508" />
+  </head>
+
+  <body>
+    <div data-component="navbar"></div>
+
+    <main id="main" class="section">
+      <div class="container">
+        <header data-reveal>
+          <div class="kicker">Programs</div>
+          <h1 class="h1">Find your program.</h1>
+          <p class="lead">Search and filter across undergraduate and graduate pathways.</p>
+        </header>
+
+        <div class="divider"></div>
+
+        <section class="card card__pad" data-reveal>
+          <div class="grid grid-2" style="align-items:end">
+            <div class="field">
+              <label class="label" for="programSearch">Search</label>
+              <input class="input" id="programSearch" type="search" placeholder="e.g. AI, Business, Data..." />
+            </div>
+            <div class="field">
+              <label class="label" for="programLevel">Level</label>
+              <select class="input" id="programLevel">
+                <option value="all">All levels</option>
+                <option value="Undergraduate">Undergraduate</option>
+                <option value="Graduate">Graduate</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" aria-live="polite">
+          <div class="grid grid-3" id="programsGrid">
+            <div class="skeleton" style="height:160px"></div>
+            <div class="skeleton" style="height:160px"></div>
+            <div class="skeleton" style="height:160px"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div data-component="footer"></div>
+
+    <script type="module" src="assets/js/programs.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+  </body>
+</html>
+

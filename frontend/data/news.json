@@ -1,0 +1,48 @@
+[
+  {
+    "id": "global-partnerships",
+    "title": "KDU Global Expands Partnerships Across Asia & Europe",
+    "date": "2026-04-18",
+    "category": "Global",
+    "highlight": "New exchange pathways, dual-degree options, and joint programs for international student success.",
+    "excerpt": "KDU Global continues to expand international partnerships to create stronger mobility and academic collaboration for global students.",
+    "image": "assets/images/news-1.png",
+    "objectPosition": "center 30%",
+    "content": [
+      "KDU Global has announced new partnerships across Asia and Europe to strengthen international student mobility and academic collaboration.",
+      "These partnerships expand exchange pathways and support joint learning experiences aligned with global industry needs.",
+      "Students benefit from broader academic options, stronger international networks, and clearer global career outcomes."
+    ]
+  },
+  {
+    "id": "ai-lab",
+    "title": "New AI Innovation Lab Opens at KDU Global",
+    "date": "2026-04-29",
+    "category": "Research",
+    "highlight": "A production-ready environment for ML prototyping, data engineering, and industry collaboration.",
+    "excerpt": "The AI Innovation Lab provides a modern learning and research environment designed for practical, career-ready outcomes.",
+    "image": "assets/images/news-2.png",
+    "objectPosition": "center 40%",
+    "content": [
+      "The new AI Innovation Lab supports hands-on projects across machine learning, data engineering, and applied research.",
+      "The space is designed to help students build portfolio-grade work and collaborate with industry-style workflows.",
+      "KDU Global continues to invest in modern learning environments to support international student success."
+    ]
+  },
+  {
+    "id": "scholarships",
+    "title": "Scholarships 2026: Merit-Based Awards for Global Students",
+    "date": "2026-05-02",
+    "category": "Admissions",
+    "highlight": "Multiple scholarship tracks, streamlined review, and early decision benefits for international applicants.",
+    "excerpt": "Scholarships for 2026 are available for eligible global students with strong academic performance and leadership potential.",
+    "image": "assets/images/news-3.png",
+    "objectPosition": "center 18%",
+    "content": [
+      "KDU Global scholarships for 2026 support international applicants through a range of merit-based tracks.",
+      "Applicants are encouraged to prepare a strong academic profile and submit clear supporting documents early.",
+      "Admissions advisors are available to guide students through eligibility and application timelines."
+    ]
+  }
+]
+

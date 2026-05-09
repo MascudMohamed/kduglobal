@@ -1,0 +1,6 @@
+---
+pid: 5220
+cwd: |
+  C:\Users\Mascud Mohamed
+---
+PS C:\Users\Mascud Mohamed>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>News & Events | Kyungdong University (KDU Global)</title>
+    <meta name="description" content="KDU Global news and events for international students." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/variables.css?v=20260508" />
+    <link rel="stylesheet" href="assets/css/utilities.css?v=20260508" />
+    <link rel="stylesheet" href="assets/css/animations.css?v=20260508" />
+    <link rel="stylesheet" href="assets/css/style.css?v=20260509" />
+    <link rel="stylesheet" href="assets/css/responsive.css?v=20260508" />
+  </head>
+
+  <body>
+    <div data-component="navbar"></div>
+
+    <main id="main" class="section">
+      <div class="container">
+        <header data-reveal>
+          <div class="kicker">News & Events</div>
+          <h1 class="h1">What’s happening at KDU Global.</h1>
+          <p class="lead">Announcements, webinars, and campus experiences for global students.</p>
+        </header>
+
+        <div class="divider"></div>
+
+        <section class="grid grid-2">
+          <article class="card card__pad" data-reveal>
+            <div class="section__head" style="margin-bottom:12px">
+              <div>
+                <div class="kicker">News</div>
+                <h2 class="h2">Latest news</h2>
+              </div>
+              <a class="btn" href="news-detail.html">View highlights</a>
+            </div>
+            <div class="grid" id="newsList" aria-live="polite">
+              <div class="skeleton" style="height:220px"></div>
+              <div class="skeleton" style="height:220px"></div>
+              <div class="skeleton" style="height:220px"></div>
+            </div>
+          </article>
+          <article class="card card__pad" data-reveal>
+            <div class="section__head" style="margin-bottom:12px">
+              <div>
+                <div class="kicker">Events</div>
+                <h2 class="h2">Upcoming events</h2>
+              </div>
+              <a class="btn" href="contact.html">Ask / Register</a>
+            </div>
+            <div class="grid" id="eventsList" aria-live="polite">
+              <div class="skeleton" style="height:120px"></div>
+              <div class="skeleton" style="height:120px"></div>
+              <div class="skeleton" style="height:120px"></div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <div data-component="footer"></div>
+
+    <script type="module" src="assets/js/news.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+  </body>
+</html>
+

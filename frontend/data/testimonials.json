@@ -1,0 +1,27 @@
+[
+  {
+    "id": "t1",
+    "name": "Alisher Maultetov",
+    "country": "Kazakhstan",
+    "dept": "Department of Smart Computing",
+    "quote": "My experience at KDU Global has been exceptional, thanks to its comprehensive curriculum and abundant scholarship opportunities.",
+    "image": "assets/images/student-1.png"
+  },
+  {
+    "id": "t2",
+    "name": "Mary Lily",
+    "country": "Uganda",
+    "dept": "Department of International Business Administration",
+    "quote": "Studying at KDU Global has been transformative, providing a diverse and inclusive environment that has enriched my academic growth.",
+    "image": "assets/images/student-2.png"
+  },
+  {
+    "id": "t3",
+    "name": "Olesia Maranika",
+    "country": "Latvia",
+    "dept": "Department of International Business Administration",
+    "quote": "KDU Global’s diverse community and supportive resources made my transition seamless and my educational journey exciting.",
+    "image": "assets/images/student-3.png"
+  }
+]
+

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "open-day",
+    "title": "International Open Day (Online)",
+    "date": "2026-05-22",
+    "location": "Zoom",
+    "type": "Event",
+    "image": "assets/images/event-1.png"
+  },
+  {
+    "id": "scholarship-webinar",
+    "title": "Scholarship Webinar: How to Maximize Your Award",
+    "date": "2026-05-28",
+    "location": "KDU Global Center",
+    "type": "Webinar",
+    "image": "assets/images/event-2.png"
+  },
+  {
+    "id": "campus-tour",
+    "title": "Weekend Campus Tour (English)",
+    "date": "2026-06-07",
+    "location": "Seoul Campus",
+    "type": "Tour",
+    "image": "assets/images/event-3.png"
+  }
+]
+

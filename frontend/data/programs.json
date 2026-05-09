@@ -1,0 +1,43 @@
+[
+  {
+    "id": "smart-computing",
+    "level": "Bachelor",
+    "title": "BSc Smart Computing",
+    "desc": "Modern software engineering, cloud-ready systems, and practical computing for global careers.",
+    "duration": "4 years",
+    "campus": "KDU Global Campus",
+    "tags": ["Software", "Cloud", "Systems"],
+    "image": "assets/images/program-smart-computing.png"
+  },
+  {
+    "id": "artificial-intelligence",
+    "level": "Bachelor",
+    "title": "BSc Artificial Intelligence",
+    "desc": "AI fundamentals, applied machine learning, and ethical innovation for real-world impact.",
+    "duration": "4 years",
+    "campus": "KDU Global Campus",
+    "tags": ["AI", "ML", "Innovation"],
+    "image": "assets/images/program-artificial-intelligence.png"
+  },
+  {
+    "id": "international-hotel-management",
+    "level": "Bachelor",
+    "title": "BSc International Hotel Management",
+    "desc": "Hospitality operations, guest experience, and leadership for an international service industry.",
+    "duration": "4 years",
+    "campus": "KDU Global Campus",
+    "tags": ["Hospitality", "Operations", "Leadership"],
+    "image": "assets/images/program-international-hotel-management.png"
+  },
+  {
+    "id": "international-business-management",
+    "level": "Bachelor",
+    "title": "BSc International Business Management",
+    "desc": "Business strategy, marketing, and cross-cultural management for a global economy.",
+    "duration": "4 years",
+    "campus": "KDU Global Campus",
+    "tags": ["Business", "Management", "Global"],
+    "image": "assets/images/program-international-business-management.png"
+  }
+]
+

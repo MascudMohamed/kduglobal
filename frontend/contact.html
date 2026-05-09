@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact | Kyungdong University (KDU Global)</title>
+    <meta name="description" content="Contact KDU Global international admissions. Submit an inquiry and view campus location." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/variables.css?v=20260508" />
+    <link rel="stylesheet" href="assets/css/utilities.css?v=20260508" />
+    <link rel="stylesheet" href="assets/css/animations.css?v=20260508" />
+    <link rel="stylesheet" href="assets/css/style.css?v=20260509" />
+    <link rel="stylesheet" href="assets/css/responsive.css?v=20260508" />
+  </head>
+
+  <body>
+    <div data-component="navbar"></div>
+
+    <main id="main" class="section">
+      <div class="container">
+        <header data-reveal>
+          <div class="kicker">Contact</div>
+          <h1 class="h1">Talk to international admissions.</h1>
+          <p class="lead">Fast responses, clear guidance, and student-first support.</p>
+        </header>
+
+        <div class="divider"></div>
+
+        <section class="grid grid-2">
+          <article class="card card__pad" data-reveal>
+            <h2 class="h2">Send a message</h2>
+            <form id="contactForm" class="grid" style="gap:14px; margin-top:12px" novalidate>
+              <div class="field">
+                <label class="label" for="cName">Full name</label>
+                <input class="input" id="cName" name="name" autocomplete="name" required />
+                <div class="error" data-error-for="name" aria-live="polite"></div>
+              </div>
+              <div class="field">
+                <label class="label" for="cEmail">Email</label>
+                <input class="input" id="cEmail" name="email" type="email" autocomplete="email" required />
+                <div class="error" data-error-for="email" aria-live="polite"></div>
+              </div>
+              <div class="field">
+                <label class="label" for="cMessage">Message</label>
+                <textarea class="input" id="cMessage" name="message" rows="5" placeholder="Tell us your program and timeline..." required></textarea>
+                <div class="error" data-error-for="message" aria-live="polite"></div>
+              </div>
+              <button class="btn btn--primary" type="submit">Send (demo)</button>
+              <p class="muted-2" id="contactStatus" aria-live="polite" style="margin:0"></p>
+            </form>
+          </article>
+
+          <article class="card card__pad" data-reveal>
+            <h2 class="h2">Campus & office</h2>
+            <p class="muted">Seoul, Republic of Korea (dummy address for prototype).</p>
+            <div class="grid" style="gap:10px; margin-top:12px">
+              <div class="quick__item"><strong>Phone</strong><span>+82 (0) 00-0000-0000</span></div>
+              <div class="quick__item"><strong>Email</strong><span>global@kduniv.ac.kr</span></div>
+              <div class="quick__item"><strong>WhatsApp</strong><span>Available</span></div>
+            </div>
+            <div class="divider"></div>
+            <div class="card" style="overflow:hidden">
+              <iframe
+                title="KDU Campus Map"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                style="border:0; width:100%; height:320px"
+                src="https://www.google.com/maps?q=Seoul%20Korea&output=embed">
+              </iframe>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <div data-component="footer"></div>
+
+    <script type="module" src="assets/js/contact.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+  </body>
+</html>
+
