@@ -1,0 +1,53 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B4EA2"/>
+      <stop offset="0.55" stop-color="#163B6A"/>
+      <stop offset="1" stop-color="#0A1E3A"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="240" y1="140" x2="980" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#CF1F2E" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#F5C84C" stop-opacity="0.25"/>
+    </linearGradient>
+    <filter id="soft" x="-50" y="-50" width="1300" height="820" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="18" />
+    </filter>
+  </defs>
+
+  <rect width="1200" height="720" rx="36" fill="url(#bg)"/>
+  <circle cx="270" cy="170" r="210" fill="url(#accent)" filter="url(#soft)" opacity="0.8"/>
+  <circle cx="980" cy="540" r="260" fill="url(#accent)" filter="url(#soft)" opacity="0.55"/>
+
+  <g opacity="0.22">
+    <path d="M120 540C270 430 410 410 560 505C740 620 900 560 1080 420" stroke="white" stroke-width="4"/>
+    <path d="M120 575C285 455 430 440 585 535C770 650 930 590 1080 450" stroke="white" stroke-width="2"/>
+  </g>
+
+  <g>
+    <rect x="140" y="190" width="420" height="320" rx="24" fill="white" opacity="0.10"/>
+    <rect x="170" y="230" width="360" height="54" rx="14" fill="white" opacity="0.14"/>
+    <rect x="170" y="300" width="290" height="18" rx="9" fill="white" opacity="0.18"/>
+    <rect x="170" y="330" width="330" height="18" rx="9" fill="white" opacity="0.16"/>
+    <rect x="170" y="360" width="260" height="18" rx="9" fill="white" opacity="0.14"/>
+
+    <rect x="170" y="410" width="170" height="46" rx="14" fill="#CF1F2E" opacity="0.95"/>
+    <rect x="350" y="410" width="150" height="46" rx="14" fill="white" opacity="0.12"/>
+  </g>
+
+  <g>
+    <circle cx="820" cy="280" r="78" fill="white" opacity="0.12"/>
+    <path d="M820 234C838 234 853 249 853 267C853 288 838 302 820 302C802 302 787 288 787 267C787 249 802 234 820 234Z" fill="white" opacity="0.95"/>
+    <path d="M755 384C770 343 792 324 820 324C848 324 870 343 885 384" stroke="white" stroke-width="14" stroke-linecap="round" opacity="0.9"/>
+
+    <rect x="705" y="420" width="230" height="90" rx="22" fill="white" opacity="0.10"/>
+    <rect x="735" y="448" width="170" height="14" rx="7" fill="white" opacity="0.22"/>
+    <rect x="735" y="472" width="140" height="14" rx="7" fill="white" opacity="0.18"/>
+  </g>
+
+  <g opacity="0.65">
+    <circle cx="1020" cy="170" r="6" fill="white"/>
+    <circle cx="1056" cy="198" r="4" fill="white"/>
+    <circle cx="1002" cy="226" r="5" fill="white"/>
+  </g>
+</svg>
+

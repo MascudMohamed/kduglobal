@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Department | Kyungdong University (KDU Global)</title>
+    <meta name="description" content="Department overview and curriculum at KDU Global." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/variables.css?v=20260508" />
+    <link rel="stylesheet" href="assets/css/utilities.css?v=20260508" />
+    <link rel="stylesheet" href="assets/css/animations.css?v=20260508" />
+    <link rel="stylesheet" href="assets/css/style.css?v=20260509" />
+    <link rel="stylesheet" href="assets/css/responsive.css?v=20260508" />
+  </head>
+
+  <body>
+    <div data-component="navbar"></div>
+
+    <main id="main">
+      <section class="pageHero">
+        <div class="container pageHero__grid">
+          <div class="pageHero__content" data-reveal>
+            <div class="kicker" id="deptSchool">Department</div>
+            <h1 class="h1" id="deptName">Loading…</h1>
+            <p class="lead" id="deptSummary">Please wait.</p>
+            <div class="pageHero__cta">
+              <a class="btn btn--primary" href="admissions.html#apply">Open application form</a>
+              <a class="btn" href="academics.html#departments">Back to departments</a>
+            </div>
+          </div>
+
+          <div class="pageHero__media pageHero__media--contain card" data-reveal>
+            <img
+              id="deptImage"
+              src="assets/images/academics-hero.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+              onerror="this.onerror=null; this.src='assets/images/academics-hero.svg';"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid grid-2">
+          <article class="card card__pad" data-reveal>
+            <h2 class="h2">Program details</h2>
+            <div class="grid" style="gap:10px; margin-top:12px" id="deptFacts"></div>
+          </article>
+
+          <article class="card card__pad" data-reveal>
+            <h2 class="h2">Highlights</h2>
+            <div class="deptHighlights" id="deptHighlights"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Curriculum">
+        <div class="container section__head" data-reveal>
+          <div>
+            <div class="kicker">Curriculum</div>
+            <h2 class="h2">Curriculum overview</h2>
+            <p class="lead">A clear, term-by-term outline (prototype content).</p>
+          </div>
+        </div>
+
+        <div class="container grid grid-2" id="deptCurriculum"></div>
+      </section>
+    </main>
+
+    <div data-component="footer"></div>
+
+    <script type="module" src="assets/js/department.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+  </body>
+</html>
+

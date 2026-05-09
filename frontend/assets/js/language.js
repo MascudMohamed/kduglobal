@@ -4,8 +4,9 @@ const TEXT = {
   en: {
     news: "News",
     contact: "Contact",
-    about: "About",
+    intro: "Introduction",
     programs: "Programs",
+    academics: "Academics",
     admissions: "Admissions",
     newsEvents: "News & Events",
     applyContact: "Apply / Contact",
@@ -14,8 +15,9 @@ const TEXT = {
   ko: {
     news: "뉴스",
     contact: "문의",
-    about: "소개",
+    intro: "소개",
     programs: "학과/전공",
+    academics: "학사/학과",
     admissions: "입학",
     newsEvents: "뉴스·행사",
     applyContact: "지원/문의",

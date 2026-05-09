@@ -4,11 +4,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Admissions | Kyungdong University (KDU Global)</title>
-    <meta name="description" content="Admissions guide and application steps for international students at Kyungdong University (KDU Global)." />
+    <meta
+      name="description"
+      content="Admissions guide and application steps for international students at Kyungdong University (KDU Global)."
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="assets/css/variables.css?v=20260508" />
     <link rel="stylesheet" href="assets/css/utilities.css?v=20260508" />
@@ -20,89 +26,365 @@
   <body>
     <div data-component="navbar"></div>
 
-    <main id="main" class="section">
-      <div class="container">
-        <header data-reveal>
-          <div class="kicker">Admissions</div>
-          <h1 class="h1">Apply with confidence.</h1>
-          <p class="lead">A clear, international-student-first admissions experience.</p>
-        </header>
-
-        <div class="divider"></div>
-
-        <section class="grid grid-2">
-          <article class="card card__pad" data-reveal>
-            <h2 class="h2">Admission process</h2>
-            <ol class="muted" style="margin:12px 0 0; padding-left:18px">
-              <li>Choose program & check requirements</li>
-              <li>Prepare documents (passport, transcript, etc.)</li>
-              <li>Submit online application</li>
-              <li>Interview / review</li>
-              <li>Offer & tuition deposit</li>
-              <li>Visa support</li>
-            </ol>
-            <div style="margin-top:14px">
-              <a class="btn btn--primary" href="contact.html">Talk to admissions</a>
-              <a class="btn" href="https://pdf.ac/Peqea7Q-" target="_blank" rel="noopener noreferrer">Open application form</a>
-            </div>
-          </article>
-
-          <article id="scholarships" class="card card__pad" data-reveal>
-            <h2 class="h2">Scholarships</h2>
-            <p class="muted">Merit-based and need-based scholarships for global students (prototype content).</p>
-            <div class="grid" style="gap:10px; margin-top:12px">
-              <div class="quick__item"><strong>Global Excellence</strong><span>Up to 70% tuition</span></div>
-              <div class="quick__item"><strong>Leadership Track</strong><span>Up to 50% tuition</span></div>
-              <div class="quick__item"><strong>Early Decision</strong><span>Fee waiver</span></div>
-            </div>
-          </article>
-        </section>
-
-        <section id="visa" class="section">
-          <div class="section__head" data-reveal>
-            <div>
-              <div class="kicker">International</div>
-              <h2 class="h2">Visa guide</h2>
-              <p class="lead">Dummy checklist for the prototype; real requirements vary by country.</p>
-            </div>
-          </div>
-          <div class="grid grid-3">
-            <div class="card card__pad" data-reveal>
-              <h3 class="h2">Documents</h3>
-              <p class="muted">Passport, transcripts, bank statement, health check (if required).</p>
-            </div>
-            <div class="card card__pad" data-reveal>
-              <h3 class="h2">Processing</h3>
-              <p class="muted">KDU issues admission documents; student applies at embassy/consulate.</p>
-            </div>
-            <div class="card card__pad" data-reveal>
-              <h3 class="h2">Arrival</h3>
-              <p class="muted">Orientation, housing setup, campus card, and local registration support.</p>
-            </div>
-          </div>
-        </section>
-
-        <section id="apply" class="section">
-          <div class="section__head" data-reveal>
-            <div>
-              <div class="kicker">Application</div>
-              <h2 class="h2">Official application form</h2>
-              <p class="lead">Submit your application through our official form. It opens in a new browser tab so you can keep this page open for reference.</p>
+    <main id="main">
+      <section class="pageHero">
+        <div class="container pageHero__grid">
+          <div class="pageHero__content" data-reveal>
+            <div class="kicker">Admissions</div>
+            <h1 class="h1">A clear, professional admissions journey.</h1>
+            <p class="lead">
+              Simple steps, fast support, and an official application form you
+              can open instantly.
+            </p>
+            <div class="pageHero__cta">
+              <a class="btn btn--primary" href="#steps">View steps</a>
+              <a
+                class="btn"
+                href="https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__4ZCI6ZUM1JVVDJYWFJHVzhYR0lWNUFHUDhVWkVWTC4u&route=shorturl"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Open application form</a>
             </div>
           </div>
 
           <div
+            class="pageHero__media pageHero__media--photo pageHero__media--admissions card"
+            data-reveal
+          >
+            <img
+              src="assets/images/admissions-hero.png"
+              alt="Admissions support"
+              loading="lazy"
+              decoding="async"
+              onerror="
+                this.onerror = null;
+                this.src = 'assets/images/admissions-hero.svg';
+              "
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="steps">
+        <div class="container section__head" data-reveal>
+          <div>
+            <div class="kicker">Application process</div>
+            <h2 class="h2">From application to enrollment</h2>
+            <p class="lead">
+              A modern step-by-step flow, aligned with international admissions
+              standards.
+            </p>
+          </div>
+        </div>
+
+        <div class="container stepFlow" aria-label="Admissions steps">
+          <div class="stepFlow__grid">
+            <div class="stepTile" data-reveal>
+              <div class="stepTile__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M7 7h10v10H7V7Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M10 14l4-4"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M14 14H10v-4"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stepTile__title">Submission of application</div>
+              <div class="stepTile__meta">
+                Open the official form and submit your details.
+              </div>
+            </div>
+
+            <div class="stepTile" data-reveal>
+              <div class="stepTile__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M7 3h7l3 3v15H7V3Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M9 11h6M9 15h6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stepTile__title">Submission of documents</div>
+              <div class="stepTile__meta">
+                Passport, transcript, and required supporting files.
+              </div>
+            </div>
+
+            <div class="stepTile" data-reveal>
+              <div class="stepTile__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 12l4 4L20 4"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="stepTile__title">Document screening</div>
+              <div class="stepTile__meta">
+                Eligibility assessment and review completion.
+              </div>
+            </div>
+
+            <div class="stepTile" data-reveal>
+              <div class="stepTile__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M6 6h12v9H6V6Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M10 19h4"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M12 15v4"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stepTile__title">Interview</div>
+              <div class="stepTile__meta">
+                Online or offline interview (if applicable).
+              </div>
+            </div>
+
+            <div class="stepTile" data-reveal>
+              <div class="stepTile__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 8h16v12H4V8Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M7 8V6a5 5 0 0 1 10 0v2"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stepTile__title">Issuance of offer letter</div>
+              <div class="stepTile__meta">
+                Official result and next instructions.
+              </div>
+            </div>
+
+            <div class="stepTile" data-reveal>
+              <div class="stepTile__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 2v20M6 6h12M7 10h10M8 14h8M9 18h6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stepTile__title">Payment of tuition</div>
+              <div class="stepTile__meta">Deposit to confirm your place.</div>
+            </div>
+
+            <div class="stepTile" data-reveal>
+              <div class="stepTile__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 2l7 5v6c0 5-3 9-7 9s-7-4-7-9V7l7-5Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+              <div class="stepTile__title">Visa issuance support</div>
+              <div class="stepTile__meta">
+                Certificate/letters issued for visa processing.
+              </div>
+            </div>
+
+            <div class="stepTile" data-reveal>
+              <div class="stepTile__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 10l8-6 8 6v10H4V10Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M9 20v-6h6v6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="stepTile__title">Enrollment</div>
+              <div class="stepTile__meta">
+                Orientation, housing, and semester start.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="apply">
+        <div class="container section__head" data-reveal>
+          <div>
+            <div class="kicker">Application</div>
+            <h2 class="h2">Open the official application form</h2>
+            <p class="lead">
+              It opens in a new tab so you can keep this page open for
+              reference.
+            </p>
+          </div>
+        </div>
+
+        <div class="container">
+          <div
             class="card card__pad"
             data-reveal
-            style="display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:space-between"
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              gap: 16px;
+              align-items: center;
+              justify-content: space-between;
+            "
           >
-            <p class="muted" style="margin:0; max-width:52ch">
-              Use the button below to open the application. If your browser blocks pop-ups, allow this site or open the link manually.
+            <p class="muted" style="margin: 0; max-width: 56ch">
+              Use the button to open the application. If your browser blocks
+              pop-ups, allow this site or open the link manually.
             </p>
-            <a class="btn btn--primary" href="https://pdf.ac/Peqea7Q-" target="_blank" rel="noopener noreferrer">Open application form</a>
+            <a
+              class="btn btn--primary"
+              href="https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__4ZCI6ZUM1JVVDJYWFJHVzhYR0lWNUFHUDhVWkVWTC4u&route=shorturl"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Open application form</a>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid grid-2">
+          <article id="scholarships" class="card card__pad" data-reveal>
+            <h2 class="h2">Scholarships</h2>
+            <p class="muted">
+              Merit-based and need-based scholarships for global students
+              (prototype content).
+            </p>
+            <div class="grid" style="gap: 10px; margin-top: 12px">
+              <div class="quick__item">
+                <strong>Global Excellence</strong><span>Up to 70% tuition</span>
+              </div>
+              <div class="quick__item">
+                <strong>Leadership Track</strong><span>Up to 50% tuition</span>
+              </div>
+              <div class="quick__item">
+                <strong>Early Decision</strong><span>Fee waiver</span>
+              </div>
+            </div>
+            <div
+              style="
+                margin-top: 14px;
+                display: flex;
+                gap: 12px;
+                flex-wrap: wrap;
+              "
+            >
+              <a class="btn btn--primary" href="#apply">Open application form</a>
+              <a class="btn" href="contact.html">Ask about eligibility</a>
+            </div>
+          </article>
+
+          <article class="card card__pad" data-reveal>
+            <h2 class="h2">Talk to admissions</h2>
+            <p class="muted">
+              Share your chosen department and country — we’ll reply with a
+              simple checklist.
+            </p>
+            <div class="grid" style="gap: 10px; margin-top: 12px">
+              <div class="quick__item">
+                <strong>Response time</strong><span>Within 24–48 hours</span>
+              </div>
+              <div class="quick__item">
+                <strong>Support</strong><span>Visa, housing, arrival</span>
+              </div>
+              <div class="quick__item">
+                <strong>Help</strong><span>EN / KR support</span>
+              </div>
+            </div>
+            <div style="margin-top: 14px">
+              <a class="btn btn--primary" href="contact.html"
+                >Talk to admissions</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="visa" class="section">
+        <div class="container section__head" data-reveal>
+          <div>
+            <div class="kicker">International</div>
+            <h2 class="h2">Visa guide</h2>
+            <p class="lead">
+              Prototype checklist; real requirements vary by country.
+            </p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="grid grid-3">
+            <div class="card card__pad" data-reveal>
+              <h3 class="h2">Documents</h3>
+              <p class="muted">
+                Passport, transcripts, bank statement, health check (if
+                required).
+              </p>
+            </div>
+            <div class="card card__pad" data-reveal>
+              <h3 class="h2">Processing</h3>
+              <p class="muted">
+                KDU issues admission documents; student applies at
+                embassy/consulate.
+              </p>
+            </div>
+            <div class="card card__pad" data-reveal>
+              <h3 class="h2">Arrival</h3>
+              <p class="muted">
+                Orientation, housing setup, campus card, and local registration
+                support.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <div data-component="footer"></div>
@@ -110,4 +392,3 @@
     <script type="module" src="assets/js/main.js"></script>
   </body>
 </html>
-

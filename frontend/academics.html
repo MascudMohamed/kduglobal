@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Academics | Kyungdong University (KDU Global)</title>
+    <meta name="description" content="Explore departments and academic pathways at KDU Global." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/variables.css?v=20260508" />
+    <link rel="stylesheet" href="assets/css/utilities.css?v=20260508" />
+    <link rel="stylesheet" href="assets/css/animations.css?v=20260508" />
+    <link rel="stylesheet" href="assets/css/style.css?v=20260509" />
+    <link rel="stylesheet" href="assets/css/responsive.css?v=20260508" />
+  </head>
+
+  <body>
+    <div data-component="navbar"></div>
+
+    <main id="main">
+      <section class="pageHero">
+        <div class="container pageHero__grid">
+          <div class="pageHero__content" data-reveal>
+            <div class="kicker">Academics</div>
+            <h1 class="h1">Departments designed for global outcomes.</h1>
+            <p class="lead">Browse departments, view curriculum outlines, and explore study pathways for international students.</p>
+            <div class="pageHero__cta">
+              <a class="btn btn--primary" href="#departments">View departments</a>
+              <a class="btn" href="admissions.html">Admissions</a>
+            </div>
+          </div>
+
+          <div class="pageHero__media pageHero__media--contain card" data-reveal>
+            <img
+              src="assets/images/academics-hero.png"
+              alt="Academic departments"
+              loading="lazy"
+              decoding="async"
+              onerror="this.onerror=null; this.src='assets/images/academics-hero.svg';"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="departments">
+        <div class="container section__head" data-reveal>
+          <div>
+            <div class="kicker">Departments</div>
+            <h2 class="h2">Explore academic departments</h2>
+            <p class="lead">Select a department to view an overview and curriculum (prototype content).</p>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="grid grid-3" id="departmentsGrid" aria-live="polite">
+            <div class="skeleton" style="height:220px"></div>
+            <div class="skeleton" style="height:220px"></div>
+            <div class="skeleton" style="height:220px"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-component="footer"></div>
+
+    <script type="module" src="assets/js/academics.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+  </body>
+</html>
+

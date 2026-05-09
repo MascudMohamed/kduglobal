@@ -1,0 +1,67 @@
+[
+  {
+    "id": "cs-ai",
+    "name": "Computer Science & AI",
+    "school": "School of Computing",
+    "degree": "BSc",
+    "duration": "4 years",
+    "image": "assets/images/program-smart-computing.png",
+    "summary": "Build practical software skills and AI foundations with project-based learning.",
+    "highlights": ["Programming & algorithms", "AI fundamentals", "Capstone project"],
+    "curriculum": [
+      { "term": "Year 1", "courses": ["Programming Fundamentals", "Discrete Mathematics", "Computing Systems", "Academic English"] },
+      { "term": "Year 2", "courses": ["Data Structures", "Database Systems", "Web Development", "Probability & Statistics"] },
+      { "term": "Year 3", "courses": ["Machine Learning", "Software Engineering", "Cloud & DevOps Basics", "Electives"] },
+      { "term": "Year 4", "courses": ["AI Applications", "Capstone Project", "Internship / Industry Project", "Career Preparation"] }
+    ]
+  },
+  {
+    "id": "global-business",
+    "name": "Global Business",
+    "school": "School of Business",
+    "degree": "BBA",
+    "duration": "4 years",
+    "image": "assets/images/program-international-business-management.png",
+    "summary": "Learn modern business strategy, marketing, and international operations.",
+    "highlights": ["International management", "Digital marketing", "Business analytics"],
+    "curriculum": [
+      { "term": "Year 1", "courses": ["Principles of Management", "Microeconomics", "Business Communication", "Accounting Basics"] },
+      { "term": "Year 2", "courses": ["Marketing Fundamentals", "Macroeconomics", "Operations Management", "Business Law"] },
+      { "term": "Year 3", "courses": ["International Business", "Digital Marketing", "Data-Driven Decision Making", "Electives"] },
+      { "term": "Year 4", "courses": ["Strategic Management", "Entrepreneurship", "Capstone Project", "Internship"] }
+    ]
+  },
+  {
+    "id": "data-science",
+    "name": "Data Science",
+    "school": "School of Computing",
+    "degree": "MSc",
+    "duration": "2 years",
+    "image": "assets/images/program-artificial-intelligence.png",
+    "summary": "Turn data into decisions with statistics, ML, and modern analytics workflows.",
+    "highlights": ["Analytics pipelines", "ML modeling", "Visualization"],
+    "curriculum": [
+      { "term": "Semester 1", "courses": ["Statistics for Data Science", "Python for Analytics", "Data Wrangling", "Visualization"] },
+      { "term": "Semester 2", "courses": ["Machine Learning", "Databases & SQL", "Big Data Fundamentals", "Electives"] },
+      { "term": "Semester 3", "courses": ["Applied ML", "MLOps Basics", "Research Methods", "Electives"] },
+      { "term": "Semester 4", "courses": ["Thesis / Capstone", "Industry Project", "Career Preparation"] }
+    ]
+  },
+  {
+    "id": "tech-policy",
+    "name": "International Tech Policy",
+    "school": "School of Global Studies",
+    "degree": "MA",
+    "duration": "2 years",
+    "image": "assets/images/program-international-hotel-management.png",
+    "summary": "Explore technology governance, regulation, and global innovation ecosystems.",
+    "highlights": ["Policy analysis", "Cyber & privacy", "Innovation strategy"],
+    "curriculum": [
+      { "term": "Semester 1", "courses": ["Policy Foundations", "Technology & Society", "Research Methods", "Academic Writing"] },
+      { "term": "Semester 2", "courses": ["Data & Privacy Policy", "Cybersecurity Policy", "Economics of Innovation", "Electives"] },
+      { "term": "Semester 3", "courses": ["Global Regulation", "Case Studies Seminar", "Practicum", "Electives"] },
+      { "term": "Semester 4", "courses": ["Thesis / Capstone", "Policy Portfolio", "Career Preparation"] }
+    ]
+  }
+]
+

@@ -96,6 +96,12 @@ async function renderTestimonials() {
   grid.innerHTML = items.slice(0, 3).map(testimonialCard).join("");
 }
 
+function getApiBase() {
+  const m = document.querySelector('meta[name="kdu-api-base"]');
+  const v = m?.getAttribute("content")?.trim();
+  return v || "";
+}
+
 function initNewsletter() {
   const form = document.getElementById("newsletterForm");
   if (!form) return;
@@ -103,6 +109,7 @@ function initNewsletter() {
   const status = document.getElementById("newsletterStatus");
   const email = form.querySelector("input[name='email']");
   const emailErr = document.querySelector("[data-error-for='email']");
+  const apiBase = getApiBase();
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -114,11 +121,34 @@ function initNewsletter() {
     if (!ok) return;
 
     form.querySelector("button[type='submit']")?.setAttribute("disabled", "disabled");
-    if (status) status.textContent = "Subscribed (frontend demo). Backend will store this in Phase 2.";
+    if (status) status.textContent = apiBase ? "Sending…" : "Subscribed (demo — set kdu-api-base meta to use backend).";
 
-    await new Promise((r) => setTimeout(r, 500));
-    form.reset();
-    form.querySelector("button[type='submit']")?.removeAttribute("disabled");
+    try {
+      if (apiBase) {
+        const res = await fetch(`${apiBase}/api/newsletter.php`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({ email: value, source: "homepage" }),
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok) {
+          const msg =
+            data?.errors?.email || data?.error || `Request failed (${res.status})`;
+          if (status) status.textContent = msg;
+        } else if (status) {
+          status.textContent = data.message || "Thanks — you are subscribed.";
+          form.reset();
+        }
+      } else {
+        await new Promise((r) => setTimeout(r, 500));
+        if (status) status.textContent = "Subscribed (demo). Add <meta name=\"kdu-api-base\" content=\"...\"> to use the API.";
+        form.reset();
+      }
+    } catch {
+      if (status) status.textContent = "Could not reach server. Check API URL and CORS.";
+    } finally {
+      form.querySelector("button[type='submit']")?.removeAttribute("disabled");
+    }
   });
 }
 

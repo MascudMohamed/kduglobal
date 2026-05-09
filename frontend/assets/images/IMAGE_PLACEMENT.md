@@ -27,5 +27,27 @@ Put the reference images you sent into `frontend/assets/images/` with these file
 - `event-3.png` (event card image)
 - `about-hero.png` (about page hero image)
 
+## New pages (PNG)
+
+Add these **PNG** files for the new pages we created:
+
+- `intro-hero.png` (Introduction page hero image) → used in `introduction.html`
+- `admissions-hero.png` (Admissions page hero image) → used in `admissions.html`
+- `academics-hero.png` (Academics page hero image) → used in `academics.html` and fallback on `department.html`
+
+## Department images (PNG)
+
+Add these department header images (shown on `academics.html` cards + `department.html` detail page):
+
+- `dept-cs-ai.png` (Computer Science & AI)
+- `dept-global-business.png` (Global Business)
+- `dept-data-science.png` (Data Science)
+- `dept-tech-policy.png` (International Tech Policy)
+
+## Note
+
+Right now the project includes **SVG placeholders** for these new images so the pages don’t look broken.  
+If you want, I can switch the code to use the PNG filenames above **after you upload them** (or if you switch to a model that supports image generation inside Cursor).
+
 After placing them, refresh the homepage.
 
