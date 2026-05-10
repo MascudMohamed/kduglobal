@@ -5,7 +5,7 @@ Put the reference images you sent into `frontend/assets/images/` with these file
 - `hero-1.png` (hero slide #1)
 - `hero-2.png` (hero slide #2)
 - `hero-3.png` (hero slide #3)
-- `hero-4.png` (hero slide #4)
+- `hero-4.png` (hero slide #4 — **Scholarships**; also accepts `scholarships-hero.png` as alternate name)
 - `campus-1.png` (campus view #1)
 - `campus-2.png` (campus view #2)
 - `campus-3.png` (campus view #3)

@@ -1,3 +1,6 @@
+import { pickLang } from "./language.js";
+import { assetHref } from "./assets.js";
+
 function escapeHtml(s) {
   return String(s)
     .replaceAll("&", "&amp;")
@@ -5,6 +8,15 @@ function escapeHtml(s) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
+}
+
+function fallbackNewsImage(id) {
+  const m = {
+    "global-partnerships": "assets/images/intro-hero.svg",
+    "ai-lab": "assets/images/dept-data-science.svg",
+    "scholarships": "assets/images/academics-hero.svg",
+  };
+  return m[id] || "assets/images/intro-hero.svg";
 }
 
 function getId() {
@@ -18,7 +30,12 @@ async function safeJson(path) {
   return res.json();
 }
 
+let currentItem = null;
+
 function renderArticle(item) {
+  const title = pickLang(item, "title");
+  const category = pickLang(item, "category");
+  const lead = pickLang(item, "highlight") || pickLang(item, "excerpt") || "";
   const date = new Date(item.date);
   const nice = Number.isNaN(date.getTime())
     ? item.date
@@ -27,26 +44,26 @@ function renderArticle(item) {
   const paras = (item.content || []).map((p) => `<p class="muted">${escapeHtml(p)}</p>`).join("");
   const pos = item.objectPosition ? ` style="object-position:${escapeHtml(item.objectPosition)}"` : "";
 
-  document.title = `${item.title} | KDU Global`;
+  document.title = `${title} | KDU Global`;
 
   return `
     <div class="article__media">
-      <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.title)}" loading="eager" decoding="async"${pos} />
+      <img src="${escapeHtml(assetHref(item.image))}" alt="${escapeHtml(title)}" loading="eager" decoding="async"${pos} onerror="this.onerror=null;this.src='${escapeHtml(assetHref(fallbackNewsImage(item.id)))}'" />
     </div>
     <div class="article__body">
       <div class="article__meta">
-        <span class="badge badge--blue">${escapeHtml(item.category)}</span>
+        <span class="badge badge--blue">${escapeHtml(category)}</span>
         <span class="muted">${escapeHtml(nice)}</span>
       </div>
-      <h1 class="h1" style="margin-top:10px">${escapeHtml(item.title)}</h1>
-      <p class="lead">${escapeHtml(item.highlight || item.excerpt || "")}</p>
+      <h1 class="h1" style="margin-top:10px">${escapeHtml(title)}</h1>
+      <p class="lead">${escapeHtml(lead)}</p>
       <div class="divider"></div>
       ${paras}
     </div>
   `;
 }
 
-async function boot() {
+async function render() {
   const id = getId();
   const root = document.getElementById("newsArticle");
   if (!root) return;
@@ -64,8 +81,13 @@ async function boot() {
     return;
   }
 
+  currentItem = item;
   root.innerHTML = renderArticle(item);
 }
 
-boot().catch((e) => console.error(e));
+render().catch((e) => console.error(e));
 
+window.addEventListener("kdu:langchange", () => {
+  const root = document.getElementById("newsArticle");
+  if (root && currentItem) root.innerHTML = renderArticle(currentItem);
+});

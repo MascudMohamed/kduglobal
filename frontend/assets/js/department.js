@@ -1,3 +1,5 @@
+import { pickLang, t } from "./language.js";
+
 function esc(s) {
   return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 }
@@ -7,12 +9,27 @@ function setText(id, value) {
   if (el) el.textContent = value;
 }
 
-function setImg(id, src, alt) {
+function setImg(id, src, alt, fallbackSrc) {
   const el = document.getElementById(id);
   if (!el) return;
   el.setAttribute("src", src);
   if (alt != null) el.setAttribute("alt", alt);
+  if (fallbackSrc) {
+    el.onerror = () => {
+      el.onerror = null;
+      el.setAttribute("src", fallbackSrc);
+    };
+  } else {
+    el.onerror = null;
+  }
 }
+
+const DEPT_IMAGE_FALLBACK = {
+  "cs-ai": "assets/images/dept-cs-ai.svg",
+  "global-business": "assets/images/dept-global-business.svg",
+  "data-science": "assets/images/dept-data-science.svg",
+  "tech-policy": "assets/images/dept-tech-policy.svg",
+};
 
 async function loadDepartments() {
   const res = await fetch("data/departments.json", { credentials: "same-origin" });
@@ -22,9 +39,9 @@ async function loadDepartments() {
 
 function facts(dep) {
   const items = [
-    ["Degree", dep.degree || "—"],
-    ["Duration", dep.duration || "—"],
-    ["School", dep.school || "—"]
+    [t("factDegree"), pickLang(dep, "degree") || "—"],
+    [t("factDuration"), pickLang(dep, "duration") || "—"],
+    [t("factSchool"), pickLang(dep, "school") || "—"]
   ];
   return items
     .map(([k, v]) => `<div class="quick__item"><strong>${esc(k)}</strong><span>${esc(v)}</span></div>`)
@@ -33,21 +50,21 @@ function facts(dep) {
 
 function highlights(dep) {
   const list = Array.isArray(dep.highlights) ? dep.highlights : [];
-  if (!list.length) return `<p class="muted" style="margin:0">Highlights will appear here.</p>`;
+  if (!list.length) return `<p class="muted" style="margin:0">${esc(t("deptHighlightsEmpty"))}</p>`;
   return list.map((h) => `<div class="deptHighlights__item"><span class="deptHighlights__dot" aria-hidden="true"></span>${esc(h)}</div>`).join("");
 }
 
 function curriculum(dep) {
   const blocks = Array.isArray(dep.curriculum) ? dep.curriculum : [];
   if (!blocks.length) {
-    return `<div class="card card__pad" style="grid-column:1/-1"><p class="muted" style="margin:0">Curriculum coming soon.</p></div>`;
+    return `<div class="card card__pad" style="grid-column:1/-1"><p class="muted" style="margin:0">${esc(t("deptCurriculumSoon"))}</p></div>`;
   }
   return blocks
     .map((b) => {
       const courses = Array.isArray(b.courses) ? b.courses : [];
       return `
         <article class="card card__pad deptTerm" data-reveal>
-          <h3 class="h2">${esc(b.term || "Term")}</h3>
+          <h3 class="h2">${esc(b.term || t("deptTermDefault"))}</h3>
           <ul class="deptTerm__list">
             ${courses.map((c) => `<li>${esc(c)}</li>`).join("")}
           </ul>
@@ -57,26 +74,23 @@ function curriculum(dep) {
     .join("");
 }
 
-async function boot() {
-  const u = new URL(window.location.href);
-  const id = u.searchParams.get("id");
-  if (!id) {
-    window.location.replace("academics.html#departments");
-    return;
-  }
+let currentDep = null;
 
-  const deps = await loadDepartments();
-  const dep = Array.isArray(deps) ? deps.find((d) => d && d.id === id) : null;
-  if (!dep) {
-    window.location.replace("academics.html#departments");
-    return;
-  }
+function renderDepartment() {
+  if (!currentDep) return;
+  const dep = currentDep;
+  const name = pickLang(dep, "name");
 
-  document.title = `${dep.name} | KDU Global`;
-  setText("deptSchool", dep.school || "Department");
-  setText("deptName", dep.name || "Department");
-  setText("deptSummary", dep.summary || "");
-  setImg("deptImage", dep.image || "assets/images/academics-hero.svg", dep.name || "");
+  document.title = `${name} | KDU Global`;
+  setText("deptSchool", pickLang(dep, "school") || "Department");
+  setText("deptName", name || "Department");
+  setText("deptSummary", pickLang(dep, "summary") || "");
+  setImg(
+    "deptImage",
+    dep.image || "assets/images/academics-hero.png",
+    name || "",
+    DEPT_IMAGE_FALLBACK[dep.id] || "assets/images/academics-hero.svg"
+  );
 
   const factsEl = document.getElementById("deptFacts");
   if (factsEl) factsEl.innerHTML = facts(dep);
@@ -88,5 +102,28 @@ async function boot() {
   if (cEl) cEl.innerHTML = curriculum(dep);
 }
 
-boot().catch(console.error);
+async function boot() {
+  const u = new URL(window.location.href);
+  const id = u.searchParams.get("id");
+  if (!id) {
+    window.location.replace("academics.html#departments");
+    return;
+  }
 
+  setText("deptName", t("deptLoading"));
+  setText("deptSummary", t("deptWait"));
+
+  const deps = await loadDepartments();
+  const dep = Array.isArray(deps) ? deps.find((d) => d && d.id === id) : null;
+  if (!dep) {
+    window.location.replace("academics.html#departments");
+    return;
+  }
+
+  currentDep = dep;
+  renderDepartment();
+}
+
+window.addEventListener("kdu:langchange", renderDepartment);
+
+boot().catch(console.error);

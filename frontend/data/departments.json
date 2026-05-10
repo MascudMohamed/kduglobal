@@ -2,11 +2,16 @@
   {
     "id": "cs-ai",
     "name": "Computer Science & AI",
+    "nameKo": "컴퓨터과학·인공지능",
     "school": "School of Computing",
+    "schoolKo": "컴퓨팅대학",
     "degree": "BSc",
+    "degreeKo": "이학사",
     "duration": "4 years",
+    "durationKo": "4년",
     "image": "assets/images/program-smart-computing.png",
     "summary": "Build practical software skills and AI foundations with project-based learning.",
+    "summaryKo": "프로젝트 중심 학습으로 실무 소프트웨어 역량과 AI 기초를 다집니다.",
     "highlights": ["Programming & algorithms", "AI fundamentals", "Capstone project"],
     "curriculum": [
       { "term": "Year 1", "courses": ["Programming Fundamentals", "Discrete Mathematics", "Computing Systems", "Academic English"] },
@@ -18,11 +23,16 @@
   {
     "id": "global-business",
     "name": "Global Business",
+    "nameKo": "글로벌 비즈니스",
     "school": "School of Business",
+    "schoolKo": "경영대학",
     "degree": "BBA",
+    "degreeKo": "경영학사",
     "duration": "4 years",
+    "durationKo": "4년",
     "image": "assets/images/program-international-business-management.png",
     "summary": "Learn modern business strategy, marketing, and international operations.",
+    "summaryKo": "현대 경영 전략, 마케팅, 국제 운영을 배웁니다.",
     "highlights": ["International management", "Digital marketing", "Business analytics"],
     "curriculum": [
       { "term": "Year 1", "courses": ["Principles of Management", "Microeconomics", "Business Communication", "Accounting Basics"] },
@@ -34,11 +44,16 @@
   {
     "id": "data-science",
     "name": "Data Science",
+    "nameKo": "데이터 사이언스",
     "school": "School of Computing",
+    "schoolKo": "컴퓨팅대학",
     "degree": "MSc",
+    "degreeKo": "이학석사",
     "duration": "2 years",
+    "durationKo": "2년",
     "image": "assets/images/program-artificial-intelligence.png",
     "summary": "Turn data into decisions with statistics, ML, and modern analytics workflows.",
+    "summaryKo": "통계·머신러닝·현대 분석 워크플로로 데이터를 의사결정으로 연결합니다.",
     "highlights": ["Analytics pipelines", "ML modeling", "Visualization"],
     "curriculum": [
       { "term": "Semester 1", "courses": ["Statistics for Data Science", "Python for Analytics", "Data Wrangling", "Visualization"] },
@@ -50,11 +65,16 @@
   {
     "id": "tech-policy",
     "name": "International Tech Policy",
+    "nameKo": "국제 기술 정책",
     "school": "School of Global Studies",
+    "schoolKo": "글로벌학부대학",
     "degree": "MA",
+    "degreeKo": "문학석사",
     "duration": "2 years",
+    "durationKo": "2년",
     "image": "assets/images/program-international-hotel-management.png",
     "summary": "Explore technology governance, regulation, and global innovation ecosystems.",
+    "summaryKo": "기술 거버넌스, 규제, 글로벌 혁신 생태계를 탐구합니다.",
     "highlights": ["Policy analysis", "Cyber & privacy", "Innovation strategy"],
     "curriculum": [
       { "term": "Semester 1", "courses": ["Policy Foundations", "Technology & Society", "Research Methods", "Academic Writing"] },
@@ -64,4 +84,3 @@
     ]
   }
 ]
-

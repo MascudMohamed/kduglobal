@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contact | Kyungdong University (KDU Global)</title>
     <meta name="description" content="Contact KDU Global international admissions. Submit an inquiry and view campus location." />
+    <meta name="theme-color" content="#0b4ea2" />
+    <!-- Production API (Vercel). On localhost, scripts use XAMPP: http://127.0.0.1/Kdu_backend/public unless you set kdu-api-base-local. -->
+    <meta name="kdu-api-base" content="https://kdu-backend-production.up.railway.app" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -49,7 +52,7 @@
                 <textarea class="input" id="cMessage" name="message" rows="5" placeholder="Tell us your program and timeline..." required></textarea>
                 <div class="error" data-error-for="message" aria-live="polite"></div>
               </div>
-              <button class="btn btn--primary" type="submit">Send (demo)</button>
+              <button class="btn btn--primary" type="submit">Send message</button>
               <p class="muted-2" id="contactStatus" aria-live="polite" style="margin:0"></p>
             </form>
           </article>

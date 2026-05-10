@@ -1,30 +1,73 @@
 <header class="site-header" data-header>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main" data-i18n="skipLink">Skip to content</a>
 
   <div class="topbar topbar--announce">
     <div class="container topbar__inner">
       <div class="topbar__ticker" role="region" aria-label="Announcements">
         <div class="topbar__tickerTrack">
           <div class="topbar__tickerChunk">
-            <span class="topbar__tickerItem"><strong>September intake</strong> — ongoing now. Don’t miss out — apply today.</span>
+            <span class="topbar__tickerItem" data-i18n="ticker1"></span>
             <span class="topbar__tickerSep" aria-hidden="true">·</span>
-            <span class="topbar__tickerItem">KDU Global <strong>international admissions</strong> — Fall 2026 applications open.</span>
+            <span class="topbar__tickerItem" data-i18n="ticker2"></span>
             <span class="topbar__tickerSep" aria-hidden="true">·</span>
-            <span class="topbar__tickerItem"><strong>Scholarships</strong> — merit awards for global students. Check eligibility.</span>
+            <span class="topbar__tickerItem" data-i18n="ticker3"></span>
             <span class="topbar__tickerSep" aria-hidden="true">·</span>
-            <span class="topbar__tickerItem">Need help? <a class="topbar__tickerLink" href="contact.html">Contact admissions</a> — we reply fast.</span>
+            <span class="topbar__tickerItem">
+              <span data-i18n="ticker4a"></span>
+              <a class="topbar__tickerLink" href="contact.html" data-i18n="ticker4b"></a>
+              <span data-i18n="ticker4c"></span>
+            </span>
           </div>
           <div class="topbar__tickerChunk" aria-hidden="true">
-            <span class="topbar__tickerItem"><strong>September intake</strong> — ongoing now. Don’t miss out — apply today.</span>
+            <span class="topbar__tickerItem" data-i18n="ticker1"></span>
             <span class="topbar__tickerSep" aria-hidden="true">·</span>
-            <span class="topbar__tickerItem">KDU Global <strong>international admissions</strong> — Fall 2026 applications open.</span>
+            <span class="topbar__tickerItem" data-i18n="ticker2"></span>
             <span class="topbar__tickerSep" aria-hidden="true">·</span>
-            <span class="topbar__tickerItem"><strong>Scholarships</strong> — merit awards for global students. Check eligibility.</span>
+            <span class="topbar__tickerItem" data-i18n="ticker3"></span>
             <span class="topbar__tickerSep" aria-hidden="true">·</span>
-            <span class="topbar__tickerItem">Need help? <a class="topbar__tickerLink" href="contact.html">Contact admissions</a> — we reply fast.</span>
+            <span class="topbar__tickerItem">
+              <span data-i18n="ticker4a"></span>
+              <a class="topbar__tickerLink" href="contact.html" data-i18n="ticker4b"></a>
+              <span data-i18n="ticker4c"></span>
+            </span>
           </div>
         </div>
       </div>
+
+      <div class="topbar__socialWrap" aria-label="Social media">
+        <a
+          class="topbar__social topbar__social--fb"
+          href="https://www.facebook.com/share/1DTx7cbyAq/?mibextid=wwXIfr"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-i18n-aria="socialFacebook"
+        >
+          <svg class="topbar__socialIcon" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+            <path
+              fill="currentColor"
+              d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+            />
+          </svg>
+          <span class="topbar__socialTxt">facebook</span>
+        </a>
+        <a
+          class="topbar__social topbar__social--yt"
+          href="https://youtube.com/@kduglobal9167?si=jWLDYS9Q9kJfCtmm"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-i18n-aria="socialYoutube"
+        >
+          <svg class="topbar__socialIcon topbar__socialIcon--yt" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path
+              fill="currentColor"
+              fill-rule="evenodd"
+              d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12 9.545 15.568z"
+            />
+          </svg>
+          <span class="topbar__socialTxt">YouTube</span>
+        </a>
+      </div>
+
       <div class="topbar__right">
         <div class="lang" role="group" aria-label="Language">
           <button class="lang__btn" type="button" data-lang="en" aria-pressed="true">EN</button>
@@ -40,11 +83,11 @@
     <div class="container nav__inner">
       <a class="brand" href="index.html" aria-label="Kyungdong University">
         <span class="brand__mark brand__mark--img" aria-hidden="true">
-          <img src="assets/images/kdu-logo.png" alt="" width="42" height="42" loading="eager" decoding="async" />
+          <img src="assets/images/kdu-logo.png" alt="" width="42" height="42" loading="eager" decoding="async" onerror="this.onerror=null;this.src='assets/images/kdu-logo.svg';" />
         </span>
         <span class="brand__text">
           <span class="brand__name">KYUNGDONG UNIVERSITY</span>
-          <span class="brand__sub">KDU Global · International Education</span>
+          <span class="brand__sub" data-i18n="brandSub">KDU Global · International Education</span>
         </span>
       </a>
 
@@ -58,7 +101,7 @@
         <li><a class="nav__link" href="academics.html" data-i18n="academics">Academics</a></li>
         <li><a class="nav__link" href="admissions.html" data-i18n="admissions">Admissions</a></li>
         <li><a class="nav__link" href="news.html" data-i18n="newsEvents">News & Events</a></li>
-        <li><a class="nav__link nav__link--cta" href="https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__4ZCI6ZUM1JVVDJYWFJHVzhYR0lWNUFHUDhVWkVWTC4u&route=shorturl" target="_blank" rel="noopener noreferrer">Open application form</a></li>
+        <li><a class="nav__link nav__link--cta" href="https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__4ZCI6ZUM1JVVDJYWFJHVzhYR0lWNUFHUDhVWkVWTC4u&route=shorturl" target="_blank" rel="noopener noreferrer" data-i18n="openApplicationForm">Open application form</a></li>
       </ul>
     </div>
   </nav>
@@ -77,10 +120,10 @@
         <a class="mobile-menu__link" href="academics.html" data-i18n="academics">Academics</a>
         <a class="mobile-menu__link" href="admissions.html" data-i18n="admissions">Admissions</a>
         <a class="mobile-menu__link" href="news.html" data-i18n="newsEvents">News & Events</a>
-        <a class="mobile-menu__link mobile-menu__link--cta" href="https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__4ZCI6ZUM1JVVDJYWFJHVzhYR0lWNUFHUDhVWkVWTC4u&route=shorturl" target="_blank" rel="noopener noreferrer">Open application form</a>
+        <a class="mobile-menu__link mobile-menu__link--cta" href="https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__4ZCI6ZUM1JVVDJYWFJHVzhYR0lWNUFHUDhVWkVWTC4u&route=shorturl" target="_blank" rel="noopener noreferrer" data-i18n="openApplicationForm">Open application form</a>
         <div class="mobile-menu__meta">
-          <span class="badge badge--glass">24/7 Support</span>
-          <span class="badge badge--red">Scholarships</span>
+          <span class="badge badge--glass" data-i18n="badge247">24/7 Support</span>
+          <span class="badge badge--red" data-i18n="badgeScholar">Scholarships</span>
         </div>
       </div>
     </div>

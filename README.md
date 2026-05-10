@@ -22,3 +22,7 @@ php -S localhost:8080
 
 Open `http://localhost:8080`.
 
+### Backend (Railway)
+
+The API lives in **`backend/`** (PHP 8.2 + Apache + MySQL). See **`backend/README.md`** and **`backend/RAILWAY.md`**. On Railway, set the service **Root Directory** to **`backend`** and connect a **MySQL** plugin.
+

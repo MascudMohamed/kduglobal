@@ -24,12 +24,14 @@
       <section class="pageHero">
         <div class="container pageHero__grid">
           <div class="pageHero__content" data-reveal>
-            <div class="kicker">Academics</div>
-            <h1 class="h1">Departments designed for global outcomes.</h1>
-            <p class="lead">Browse departments, view curriculum outlines, and explore study pathways for international students.</p>
+            <div class="kicker" data-i18n="academics">Academics</div>
+            <h1 class="h1" data-i18n="academicsPageTitle">Departments designed for global outcomes.</h1>
+            <p class="lead" data-i18n="academicsPageLead">
+              Browse departments, view curriculum outlines, and explore study pathways for international students.
+            </p>
             <div class="pageHero__cta">
-              <a class="btn btn--primary" href="#departments">View departments</a>
-              <a class="btn" href="admissions.html">Admissions</a>
+              <a class="btn btn--primary" href="#departments" data-i18n="academicsPageCtaDept">View departments</a>
+              <a class="btn" href="admissions.html" data-i18n="admissions">Admissions</a>
             </div>
           </div>
 
@@ -37,9 +39,10 @@
             <img
               src="assets/images/academics-hero.png"
               alt="Academic departments"
+              data-i18n-alt="academicsHeroImgAlt"
               loading="lazy"
               decoding="async"
-              onerror="this.onerror=null; this.src='assets/images/academics-hero.svg';"
+              onerror="this.onerror=null;this.src='assets/images/academics-hero.svg';"
             />
           </div>
         </div>
@@ -48,9 +51,11 @@
       <section class="section" id="departments">
         <div class="container section__head" data-reveal>
           <div>
-            <div class="kicker">Departments</div>
-            <h2 class="h2">Explore academic departments</h2>
-            <p class="lead">Select a department to view an overview and curriculum (prototype content).</p>
+            <div class="kicker" data-i18n="academicsDeptSectionKicker">Departments</div>
+            <h2 class="h2" data-i18n="academicsDeptSectionTitle">Explore academic departments</h2>
+            <p class="lead" data-i18n="academicsDeptSectionLead">
+              Select a department to view an overview and curriculum (prototype content).
+            </p>
           </div>
         </div>
 

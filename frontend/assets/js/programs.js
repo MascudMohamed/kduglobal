@@ -1,3 +1,6 @@
+import { pickLang, t } from "./language.js";
+import { assetHref } from "./assets.js";
+
 function escapeHtml(s) {
   return String(s)
     .replaceAll("&", "&amp;")
@@ -7,16 +10,29 @@ function escapeHtml(s) {
     .replaceAll("'", "&#039;");
 }
 
+function fallbackProgramImage(id) {
+  const m = {
+    "smart-computing": "assets/images/dept-cs-ai.svg",
+    "artificial-intelligence": "assets/images/dept-data-science.svg",
+    "international-hotel-management": "assets/images/dept-tech-policy.svg",
+    "international-business-management": "assets/images/dept-global-business.svg",
+  };
+  return m[id] || "assets/images/intro-hero.svg";
+}
+
 function programCard(p) {
-  const tags = (p.tags || []).slice(0, 3).map((t) => `<span class="badge badge--glass">${escapeHtml(t)}</span>`).join("");
+  const title = pickLang(p, "title");
+  const desc = pickLang(p, "desc");
+  const level = pickLang(p, "level");
+  const tags = (p.tags || []).slice(0, 3).map((x) => `<span class="badge badge--glass">${escapeHtml(x)}</span>`).join("");
   return `
     <article class="card programCard" data-reveal>
       <div class="programCard__media">
-        <img data-src="${escapeHtml(p.image || "")}" alt="${escapeHtml(p.title)}" width="900" height="520" />
+        <img src="${escapeHtml(assetHref(p.image || ""))}" alt="${escapeHtml(title)}" width="900" height="520" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${escapeHtml(assetHref(fallbackProgramImage(p.id)))}'" />
       </div>
-      <div class="programCard__tag"><span class="badge badge--blue">${escapeHtml(p.level)}</span></div>
-      <h3 class="programCard__title">${escapeHtml(p.title)}</h3>
-      <p class="programCard__desc">${escapeHtml(p.desc)}</p>
+      <div class="programCard__tag"><span class="badge badge--blue">${escapeHtml(level)}</span></div>
+      <h3 class="programCard__title">${escapeHtml(title)}</h3>
+      <p class="programCard__desc">${escapeHtml(desc)}</p>
       <div class="programCard__meta">
         <span class="badge badge--glass">${escapeHtml(p.duration)}</span>
         <span class="badge badge--glass">${escapeHtml(p.campus)}</span>
@@ -32,13 +48,18 @@ async function loadPrograms() {
   return res.json();
 }
 
+function searchHaystack(p) {
+  const title = `${p.title || ""} ${p.titleKo || ""}`;
+  const desc = `${p.desc || ""} ${p.descKo || ""}`;
+  return `${title} ${desc} ${(p.tags || []).join(" ")}`.toLowerCase();
+}
+
 function applyFilters(list, q, level) {
   const query = q.trim().toLowerCase();
   return list.filter((p) => {
     if (level !== "all" && p.level !== level) return false;
     if (!query) return true;
-    const hay = `${p.title} ${p.desc} ${(p.tags || []).join(" ")}`.toLowerCase();
-    return hay.includes(query);
+    return searchHaystack(p).includes(query);
   });
 }
 
@@ -46,8 +67,8 @@ function render(grid, list) {
   if (!list.length) {
     grid.innerHTML = `
       <div class="card card__pad" style="grid-column:1/-1">
-        <h2 class="h2">No results</h2>
-        <p class="muted">Try a different keyword or switch the level filter.</p>
+        <h2 class="h2">${escapeHtml(t("programsNoResults"))}</h2>
+        <p class="muted">${escapeHtml(t("programsNoResultsHint"))}</p>
       </div>
     `;
     return;
@@ -55,23 +76,33 @@ function render(grid, list) {
   grid.innerHTML = list.map(programCard).join("");
 }
 
-async function boot() {
-  const grid = document.getElementById("programsGrid");
-  const search = document.getElementById("programSearch");
-  const level = document.getElementById("programLevel");
-  if (!grid || !search || !level) return;
+let allPrograms = [];
+let gridEl = null;
+let searchEl = null;
+let levelEl = null;
 
-  const all = await loadPrograms();
-  const update = () => render(grid, applyFilters(all, search.value, level.value));
+function update() {
+  if (!gridEl || !searchEl || !levelEl) return;
+  render(gridEl, applyFilters(allPrograms, searchEl.value, levelEl.value));
+}
+
+async function boot() {
+  gridEl = document.getElementById("programsGrid");
+  searchEl = document.getElementById("programSearch");
+  levelEl = document.getElementById("programLevel");
+  if (!gridEl || !searchEl || !levelEl) return;
+
+  allPrograms = await loadPrograms();
 
   const u = new URL(window.location.href);
   const q = u.searchParams.get("q");
-  if (q) search.value = q;
+  if (q) searchEl.value = q;
 
-  search.addEventListener("input", update);
-  level.addEventListener("change", update);
+  searchEl.addEventListener("input", update);
+  levelEl.addEventListener("change", update);
   update();
 }
 
 boot().catch(console.error);
 
+window.addEventListener("kdu:langchange", update);

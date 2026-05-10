@@ -6,8 +6,8 @@
     <title>Kyungdong University (KDU Global) | International Admissions</title>
     <meta name="description" content="Kyungdong University (KDU Global) — international admissions portal. Programs, scholarships, student life, and global support." />
     <meta name="theme-color" content="#0b4ea2" />
-    <!-- Backend API base (no trailing slash). Change if your XAMPP URL differs. -->
-    <meta name="kdu-api-base" content="http://localhost/Kdu_backend/public" />
+    <!-- Backend API base (no trailing slash). Local: http://localhost:8080 | Railway: your *.up.railway.app -->
+    <meta name="kdu-api-base" content="https://kdu-backend-production.up.railway.app" />
 
     <meta property="og:title" content="Kyungdong University (KDU Global)" />
     <meta property="og:description" content="A premium international university platform prototype." />
@@ -31,74 +31,81 @@
       <section class="hero">
         <div class="container hero__grid hero__grid--single">
           <div class="hero__left heroSlider" data-hero>
-            <button class="heroSlider__nav heroSlider__nav--prev" type="button" data-hero-prev aria-label="Previous slide">‹</button>
-            <button class="heroSlider__nav heroSlider__nav--next" type="button" data-hero-next aria-label="Next slide">›</button>
+            <button class="heroSlider__nav heroSlider__nav--prev" type="button" data-hero-prev data-i18n-aria="homeHeroPrev" aria-label="Previous slide">‹</button>
+            <button class="heroSlider__nav heroSlider__nav--next" type="button" data-hero-next data-i18n-aria="homeHeroNext" aria-label="Next slide">›</button>
 
             <div class="hero__slide heroSlide" data-slide>
-              <img class="heroSlide__bg" src="assets/images/hero-1.png" alt="" loading="eager" decoding="async" />
+              <img class="heroSlide__bg" src="assets/images/hero-1.png" alt="" loading="eager" decoding="async" onerror="this.onerror=null;this.src='assets/images/intro-hero.svg';" />
               <div class="heroSlide__overlay"></div>
               <div class="heroSlide__content">
                 <div class="hero__meta">
-                  <span class="badge badge--blue">KDU Global</span>
-                  <span class="badge badge--red">International Admissions</span>
+                  <span class="badge badge--blue" data-i18n="homeSlide1b1">KDU Global</span>
+                  <span class="badge badge--red" data-i18n="homeSlide1b2">International Admissions</span>
                 </div>
-                <h1 class="h1">Study in Korea with a global-ready experience.</h1>
-                <p class="lead">Clear admissions guidance, strong student support, and career-ready learning for international students.</p>
+                <h1 class="h1" data-i18n="homeSlide1h">Study in Korea with a global-ready experience.</h1>
+                <p class="lead" data-i18n="homeSlide1p">Clear admissions guidance, strong student support, and career-ready learning for international students.</p>
                 <div class="hero__actions">
-                  <a class="btn btn--primary" href="admissions.html">Admissions</a>
-                  <a class="btn btn--gold" href="programs.html">Explore Programs</a>
-                  <a class="btn" href="contact.html">Talk to an advisor</a>
+                  <a class="btn btn--primary" href="admissions.html" data-i18n="homeSlide1a1">Admissions</a>
+                  <a class="btn btn--gold" href="programs.html" data-i18n="homeSlide1a2">Explore Programs</a>
+                  <a class="btn" href="contact.html" data-i18n="homeSlide1a3">Talk to an advisor</a>
                 </div>
               </div>
             </div>
 
             <div class="hero__slide heroSlide" data-slide hidden aria-hidden="true">
-              <img class="heroSlide__bg" src="assets/images/hero-2.png" alt="" loading="lazy" decoding="async" />
+              <img class="heroSlide__bg" src="assets/images/hero-2.png" alt="" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/images/admissions-hero.svg';" />
               <div class="heroSlide__overlay"></div>
               <div class="heroSlide__content">
                 <div class="hero__meta">
-                  <span class="badge badge--blue">Global Partnerships</span>
-                  <span class="badge badge--glass">Mobility · Collaboration</span>
+                  <span class="badge badge--blue" data-i18n="homeSlide2b1">Global Partnerships</span>
+                  <span class="badge badge--glass" data-i18n="homeSlide2b2">Mobility · Collaboration</span>
                 </div>
-                <h2 class="h1">International pathways that open doors.</h2>
-                <p class="lead">Partnerships and exchange opportunities designed to support global outcomes.</p>
+                <h2 class="h1" data-i18n="homeSlide2h">International pathways that open doors.</h2>
+                <p class="lead" data-i18n="homeSlide2p">Partnerships and exchange opportunities designed to support global outcomes.</p>
                 <div class="hero__actions">
-                  <a class="btn btn--primary" href="news.html">News & Events</a>
-                  <a class="btn" href="about.html">About KDU Global</a>
+                  <a class="btn btn--primary" href="news.html" data-i18n="homeSlide2a1">News & Events</a>
+                  <a class="btn" href="about.html" data-i18n="homeSlide2a2">About KDU Global</a>
                 </div>
               </div>
             </div>
 
             <div class="hero__slide heroSlide" data-slide hidden aria-hidden="true">
-              <img class="heroSlide__bg" src="assets/images/hero-3.png" alt="" loading="lazy" decoding="async" />
+              <img class="heroSlide__bg" src="assets/images/hero-3.png" alt="" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/images/academics-hero.svg';" />
               <div class="heroSlide__overlay"></div>
               <div class="heroSlide__content">
                 <div class="hero__meta">
-                  <span class="badge badge--blue">Campus Life</span>
-                  <span class="badge badge--glass">Safe · Connected · Supportive</span>
+                  <span class="badge badge--blue" data-i18n="homeSlide3b1">Campus Life</span>
+                  <span class="badge badge--glass" data-i18n="homeSlide3b2">Safe · Connected · Supportive</span>
                 </div>
-                <h2 class="h1">A welcoming campus for international students.</h2>
-                <p class="lead">Services, guidance, and student communities built for belonging and success.</p>
+                <h2 class="h1" data-i18n="homeSlide3h">A welcoming campus for international students.</h2>
+                <p class="lead" data-i18n="homeSlide3p">Services, guidance, and student communities built for belonging and success.</p>
                 <div class="hero__actions">
-                  <a class="btn btn--primary" href="contact.html">Student Support</a>
-                  <a class="btn" href="admissions.html#visa">Visa guide</a>
+                  <a class="btn btn--primary" href="contact.html" data-i18n="homeSlide3a1">Student Support</a>
+                  <a class="btn" href="admissions.html#visa" data-i18n="homeSlide3a2">Visa guide</a>
                 </div>
               </div>
             </div>
 
             <div class="hero__slide heroSlide" data-slide hidden aria-hidden="true">
-              <img class="heroSlide__bg" src="assets/images/hero-4.png" alt="" loading="lazy" decoding="async" />
+              <img
+                class="heroSlide__bg"
+                src="assets/images/hero-4.png"
+                alt=""
+                loading="lazy"
+                decoding="async"
+                onerror="(function(el){var c=['assets/images/scholarships-hero.png','assets/images/scholarships-hero.svg','assets/images/intro-hero.svg'];var i=Number(el.dataset.fi||0);if(i<c.length){el.dataset.fi=String(i+1);el.src=c[i];}else{el.onerror=null;}})(this)"
+              />
               <div class="heroSlide__overlay"></div>
               <div class="heroSlide__content">
                 <div class="hero__meta">
-                  <span class="badge badge--blue">Scholarships</span>
-                  <span class="badge badge--glass">Merit-based awards</span>
+                  <span class="badge badge--blue" data-i18n="homeSlide4b1">Scholarships</span>
+                  <span class="badge badge--glass" data-i18n="homeSlide4b2">Merit-based awards</span>
                 </div>
-                <h2 class="h1">Scholarship opportunities for global talent.</h2>
-                <p class="lead">Explore scholarship tracks and get support preparing your application.</p>
+                <h2 class="h1" data-i18n="homeSlide4h">Scholarship opportunities for global talent.</h2>
+                <p class="lead" data-i18n="homeSlide4p">Explore scholarship tracks and get support preparing your application.</p>
                 <div class="hero__actions">
-                  <a class="btn btn--primary" href="admissions.html#scholarships">Scholarships</a>
-                  <a class="btn" href="contact.html">Ask Admissions</a>
+                  <a class="btn btn--primary" href="admissions.html#scholarships" data-i18n="homeSlide4a1">Scholarships</a>
+                  <a class="btn" href="contact.html" data-i18n="homeSlide4a2">Ask Admissions</a>
                 </div>
               </div>
             </div>
@@ -111,58 +118,58 @@
             <div class="card heroFinder">
               <div class="heroFinder__head">
                 <div>
-                  <div class="kicker">Find your course</div>
-                  <h2 class="h2" style="margin-top:8px">Find your program</h2>
-                  <p class="lead">Search our international bachelor’s degrees and explore your pathway.</p>
+                  <div class="kicker" data-i18n="homeFinderKicker">Find your course</div>
+                  <h2 class="h2" style="margin-top:8px" data-i18n="homeFinderH">Find your program</h2>
+                  <p class="lead" data-i18n="homeFinderLead">Search our international bachelor’s degrees and explore your pathway.</p>
                 </div>
               </div>
 
               <form class="heroFinder__form" data-program-finder>
                 <label class="sr-only" for="finderQ">Search programs</label>
-                <input class="input heroFinder__input" id="finderQ" name="q" type="search" placeholder="Search by keyword (AI, business, hotel…)" />
-                <button class="btn btn--primary heroFinder__btn" type="submit">Search</button>
+                <input class="input heroFinder__input" id="finderQ" name="q" type="search" data-i18n-placeholder="homeFinderPh" placeholder="Search by keyword (AI, business, hotel…)" />
+                <button class="btn btn--primary heroFinder__btn" type="submit" data-i18n="homeFinderSearch">Search</button>
               </form>
 
               <div class="heroFinder__links" role="list">
-                <a class="chip" href="programs.html">Browse all programs</a>
-                <a class="chip" href="admissions.html">How to apply</a>
-                <a class="chip" href="admissions.html#scholarships">Scholarships</a>
+                <a class="chip" href="programs.html" data-i18n="homeChipBrowse">Browse all programs</a>
+                <a class="chip" href="admissions.html" data-i18n="homeChipApply">How to apply</a>
+                <a class="chip" href="admissions.html#scholarships" data-i18n="homeChipScholar">Scholarships</a>
               </div>
             </div>
 
             <div class="heroQuick__side">
               <div class="card quick">
-                <h3 class="quick__title">Quick actions</h3>
+                <h3 class="quick__title" data-i18n="homeQuick1">Quick actions</h3>
                 <div class="quick__list" role="list">
                   <a class="quick__item" href="admissions.html">
-                    <strong>Admissions guide</strong>
-                    <span>Steps & requirements</span>
+                    <strong data-i18n="homeQ1a1">Admissions guide</strong>
+                    <span data-i18n="homeQ1a1s">Steps & requirements</span>
                   </a>
                   <a class="quick__item" href="programs.html">
-                    <strong>Programs</strong>
-                    <span>Browse degrees</span>
+                    <strong data-i18n="homeQ1b1">Programs</strong>
+                    <span data-i18n="homeQ1b1s">Browse degrees</span>
                   </a>
                   <a class="quick__item" href="news.html">
-                    <strong>News & events</strong>
-                    <span>Latest updates</span>
+                    <strong data-i18n="homeQ1c1">News & events</strong>
+                    <span data-i18n="homeQ1c1s">Latest updates</span>
                   </a>
                 </div>
               </div>
 
               <div class="card quick">
-                <h3 class="quick__title">International support</h3>
+                <h3 class="quick__title" data-i18n="homeQuick2">International support</h3>
                 <div class="quick__list" role="list">
                   <a class="quick__item" href="admissions.html#visa">
-                    <strong>Visa & documents</strong>
-                    <span>Checklists</span>
+                    <strong data-i18n="homeQ2a1">Visa & documents</strong>
+                    <span data-i18n="homeQ2a1s">Checklists</span>
                   </a>
                   <a class="quick__item" href="admissions.html#scholarships">
-                    <strong>Scholarships</strong>
-                    <span>Eligibility</span>
+                    <strong data-i18n="homeQ2b1">Scholarships</strong>
+                    <span data-i18n="homeQ2b1s">Eligibility</span>
                   </a>
                   <a class="quick__item" href="contact.html">
-                    <strong>Talk to an advisor</strong>
-                    <span>Fast guidance</span>
+                    <strong data-i18n="homeQ2c1">Talk to an advisor</strong>
+                    <span data-i18n="homeQ2c1s">Fast guidance</span>
                   </a>
                 </div>
               </div>
@@ -173,19 +180,19 @@
         <div class="container statRow" aria-label="Key statistics">
           <div class="card stat" data-reveal>
             <div class="stat__num"><span data-count-to="72">0</span>+</div>
-            <div class="stat__label">Countries represented</div>
+            <div class="stat__label" data-i18n="homeStat1">Countries represented</div>
           </div>
           <div class="card stat" data-reveal>
             <div class="stat__num"><span data-count-to="180">0</span>+</div>
-            <div class="stat__label">Global partner institutions</div>
+            <div class="stat__label" data-i18n="homeStat2">Global partner institutions</div>
           </div>
           <div class="card stat" data-reveal>
             <div class="stat__num"><span data-count-to="96">0</span>%</div>
-            <div class="stat__label">Student satisfaction</div>
+            <div class="stat__label" data-i18n="homeStat3">Student satisfaction</div>
           </div>
           <div class="card stat" data-reveal>
             <div class="stat__num"><span data-count-to="140">0</span>+</div>
-            <div class="stat__label">Scholarship pathways</div>
+            <div class="stat__label" data-i18n="homeStat4">Scholarship pathways</div>
           </div>
         </div>
       </section>
@@ -193,27 +200,27 @@
       <section class="section">
         <div class="container section__head" data-reveal>
           <div>
-            <div class="kicker">Campus</div>
-            <h2 class="h2">Explore the Kyungdong University campus.</h2>
+            <div class="kicker" data-i18n="homeCampusK">Campus</div>
+            <h2 class="h2" data-i18n="homeCampusH">Explore the Kyungdong University campus.</h2>
           </div>
         </div>
 
         <div class="container campusGrid" data-reveal>
           <figure class="campusGrid__main">
-            <img src="assets/images/campus-1.png" alt="Kyungdong University campus view" loading="lazy" decoding="async" />
-            <figcaption class="campusCap">KDU Global campus</figcaption>
+            <img src="assets/images/campus-1.png" alt="Kyungdong University campus view" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/images/intro-hero.svg';" />
+            <figcaption class="campusCap" data-i18n="homeCap1">KDU Global campus</figcaption>
           </figure>
           <figure>
-            <img src="assets/images/campus-2.png" alt="Kyungdong University campus view" loading="lazy" decoding="async" />
-            <figcaption class="campusCap">Academic buildings</figcaption>
+            <img src="assets/images/campus-2.png" alt="Kyungdong University campus view" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/images/academics-hero.svg';" />
+            <figcaption class="campusCap" data-i18n="homeCap2">Academic buildings</figcaption>
           </figure>
           <figure>
-            <img src="assets/images/campus-3.png" alt="Kyungdong University campus view" loading="lazy" decoding="async" />
-            <figcaption class="campusCap">Student spaces</figcaption>
+            <img src="assets/images/campus-3.png" alt="Kyungdong University campus view" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/images/admissions-hero.svg';" />
+            <figcaption class="campusCap" data-i18n="homeCap3">Student spaces</figcaption>
           </figure>
           <figure>
-            <img src="assets/images/campus-4.png" alt="Kyungdong University campus view" loading="lazy" decoding="async" />
-            <figcaption class="campusCap">Global campus environment</figcaption>
+            <img src="assets/images/campus-4.png" alt="Kyungdong University campus view" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/images/dept-cs-ai.svg';" />
+            <figcaption class="campusCap" data-i18n="homeCap4">Global campus environment</figcaption>
           </figure>
         </div>
       </section>
@@ -222,9 +229,9 @@
         <div class="container card card__pad" data-reveal>
           <div class="grid grid-2" style="align-items:center">
             <div>
-              <div class="kicker">Leadership</div>
-              <h2 class="h2">President’s Message</h2>
-              <p class="lead">
+              <div class="kicker" data-i18n="homePresK">Leadership</div>
+              <h2 class="h2" data-i18n="homePresH">President’s Message</h2>
+              <p class="lead" data-i18n="homePresP">
                 Welcome to Kyungdong University. Our commitment is to support international students with clear pathways,
                 strong academics, and a global-ready campus experience.
               </p>
@@ -234,7 +241,7 @@
               </div>
             </div>
             <div class="presidentMedia">
-              <img src="assets/images/president.png" alt="President of Kyungdong University" loading="lazy" decoding="async" />
+              <img src="assets/images/president.png" alt="President of Kyungdong University" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/images/intro-hero.svg';" />
             </div>
           </div>
         </div>
@@ -243,9 +250,9 @@
       <section class="section">
         <div class="container section__head" data-reveal>
           <div>
-            <div class="kicker">Testimonials</div>
-            <h2 class="h2">Hear from KDU Global students.</h2>
-            <p class="lead">Student stories and outcomes (prototype content).</p>
+            <div class="kicker" data-i18n="homeTestK">Testimonials</div>
+            <h2 class="h2" data-i18n="homeTestH">Hear from KDU Global students.</h2>
+            <p class="lead" data-i18n="homeTestP">Student stories and outcomes (prototype content).</p>
           </div>
         </div>
 
@@ -259,11 +266,11 @@
       <section class="section">
         <div class="container section__head" data-reveal>
           <div>
-            <div class="kicker">Programs</div>
-            <h2 class="h2">Career-ready programs with global outcomes.</h2>
-            <p class="lead">Explore flexible pathways designed for international students.</p>
+            <div class="kicker" data-i18n="homeProgK">Programs</div>
+            <h2 class="h2" data-i18n="homeProgH">Career-ready programs with global outcomes.</h2>
+            <p class="lead" data-i18n="homeProgP">Explore flexible pathways designed for international students.</p>
           </div>
-          <a class="btn" href="programs.html">View all programs</a>
+          <a class="btn" href="programs.html" data-i18n="homeProgBtn">View all programs</a>
         </div>
 
         <div class="container grid grid-3" id="programGrid" aria-live="polite">
@@ -276,11 +283,11 @@
       <section class="section">
         <div class="container section__head" data-reveal>
           <div>
-            <div class="kicker">News & Events</div>
-            <h2 class="h2">Latest updates for international students.</h2>
-            <p class="lead">Announcements, webinars, open days, and student success stories.</p>
+            <div class="kicker" data-i18n="homeNewsK">News & Events</div>
+            <h2 class="h2" data-i18n="homeNewsH">Latest updates for international students.</h2>
+            <p class="lead" data-i18n="homeNewsP">Announcements, webinars, open days, and student success stories.</p>
           </div>
-          <a class="btn" href="news.html">Open News</a>
+          <a class="btn" href="news.html" data-i18n="homeNewsBtn">Open News</a>
         </div>
 
         <div class="container grid grid-3" id="newsGrid" aria-live="polite">
@@ -294,17 +301,17 @@
         <div class="container card card__pad" data-reveal>
           <div class="grid grid-2" style="align-items:center">
             <div>
-              <div class="kicker">Newsletter</div>
-              <h2 class="h2">Get deadlines, scholarships, and events.</h2>
+              <div class="kicker" data-i18n="homeNlK">Newsletter</div>
+              <h2 class="h2" data-i18n="homeNlH">Get deadlines, scholarships, and events.</h2>
               <!-- <p class="lead">A clean onboarding flow now — backend integration in Phase 2.</p> -->
             </div>
             <form id="newsletterForm" class="grid" style="gap:12px" novalidate>
               <div class="field">
-                <label class="label" for="newsletterEmail">Email</label>
-                <input class="input" id="newsletterEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+                <label class="label" for="newsletterEmail" data-i18n="homeNlEmail">Email</label>
+                <input class="input" id="newsletterEmail" name="email" type="email" data-i18n-placeholder="homeNlPh" placeholder="you@example.com" autocomplete="email" required />
                 <div class="error" data-error-for="email" aria-live="polite"></div>
               </div>
-              <button class="btn btn--primary" type="submit">Subscribe</button>
+              <button class="btn btn--primary" type="submit" data-i18n="homeNlSub">Subscribe</button>
               <p class="muted-2" id="newsletterStatus" aria-live="polite" style="margin:0"></p>
             </form>
           </div>

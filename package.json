@@ -1,0 +1,11 @@
+{
+  "name": "kdu-global",
+  "private": true,
+  "description": "Static frontend; Vercel build copies frontend/ to public/",
+  "scripts": {
+    "build": "node scripts/vercel-build.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
